@@ -9,8 +9,8 @@
     "port": 25,
     "secureConnection": true, 
     "auth": {
-      "user": "admin@hubing.online",
-      "pass": "*********"
+      "user": "admin",
+      "pass": "tang1234"
     }
   }
 }

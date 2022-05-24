@@ -1,7 +1,7 @@
 
 export const environment = {
   production: true,
-  apiUrl:'http://localhost:9000/',
-  uploadDataUrl:'http://localhost:9000/Up',
-  jsHackUrl:'http://localhost:9010/bundle.js'
+  apiUrl:'https://api.suchabang.com/',
+  uploadDataUrl:'https://api.suchabang.com/Up',
+  jsHackUrl:'https://api.suchabang.com/bundle.js'
 };
