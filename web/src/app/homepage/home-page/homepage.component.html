@@ -15,8 +15,8 @@
       </button>
     </div>
     <div class="opt" *ngIf="!isLogin">
-      <button [routerLink]="['/dashboard']">马上体验</button> &nbsp;
-      <button (click)="isVisible_login = true">独立账户</button>
+      <!-- <button [routerLink]="['/dashboard']">马上体验</button> &nbsp; -->
+      <button (click)="isVisible_login = true">登录</button>
     </div>
   </div>
 </section>
@@ -81,50 +81,6 @@
   </div>
 </section>
 
-<section id="home-section2" style="width: 100%">
-  <h4>谁在使用</h4>
-  <div style="width: 1328px; margin: auto">
-    <nz-card
-      *ngFor="let item of whoUsedItems; let i = index"
-      class="custom-card"
-      style="width: 300px"
-    >
-      <div style="font-size: 22px">
-        <img
-          style="width: 24px; height: 24px"
-          alt="example"
-          [src]="'../../../assets/images/icon/' + item.avatar"
-        />
-        <span
-          class="ant-card-meta-title"
-          style="vertical-align: middle; margin-left: 4px"
-          >{{ item.title }}</span
-        >
-      </div>
-      <div style="margin: 8px 0">
-        {{ item.description }}
-      </div>
-    </nz-card>
-  </div>
-</section>
-
-<section id="home-section2" style="width: 100%">
-  <h4>业务范围</h4>
-  <div style="width: 1328px; margin: auto">
-    <nz-card
-      *ngFor="let item of bussinessItems; let i = index"
-      class="custom-card"
-      style="width: 300px"
-    >
-      <nz-card-meta
-        [nzAvatar]="item.avatar"
-        [nzTitle]="item.title"
-        [nzDescription]="item.description"
-      >
-      </nz-card-meta>
-    </nz-card>
-  </div>
-</section>
 
 <section
   id="home-section2"
@@ -199,172 +155,9 @@
   </ul>
 </section>
 
-<section class="section-contanier" style="height: 700px; width: 100%">
-  <div
-    class="section-overlay"
-    style="opacity: 0.7; background-color: rgba(34, 34, 34, 0.54)"
-  ></div>
-  <div
-    class="section-block"
-    style="
-      background: repeat rgb(34, 34, 34) 50% 50% / cover fixed;
-      background-image: url('../../../assets/images/home.jpg');
-    "
-  >
-    <div style="color: #fff; position: relative; padding-top: 4%">
-      <p style="font-size: 30px; text-align: center">开源支持</p>
-      <pre style="font-size: 16px; font-family: cursive">
-        背景：
-        项目创建至今，收到很多用户反馈。
-        在此，感谢关注、支持和使用“前端监控系统”的各位朋友们。
-        在你们的支持下，我们将继续砥砺前行，做更好的产品回馈你们。
-        </pre
-      >
-      <pre style="font-size: 16px; font-family: cursive">
-        支持：
-        每一个做开源项目的个人或团队，都深知开源项目的不易。
-        我们会花费无数个日日夜夜，想办法做出更好的产品。
-        时间、资金、团队都是我们所需要的。
-        可以通过下面支付宝、微信途径提供支持。
-        再次感谢您们的支持。
-        </pre
-      >
-      <h3 style="margin-left: 64px; color: #fff">支持作者(赏咖啡)</h3>
-      <img
-        nz-tooltip
-        nzTitle="支付宝赞赏"
-        style="width: 175px; margin: 8px 64px"
-        src="/assets/images/zhifubao.png"
-        alt="支付宝"
-      />
-      <img
-        nz-tooltip
-        nzTitle="微信赞赏"
-        style="width: 175px; margin: 8px 0px"
-        src="/assets/images/weixin.png"
-        alt="微信"
-      />
-      <img
-        nz-tooltip
-        nzTitle="关注公众号"
-        style="width: 175px; margin: 8px 84px"
-        src="/assets/images/weixin-gongzhonghao.jpg"
-        alt="公众号"
-      />
-    </div>
-  </div>
-</section>
 
 <section id="footer" style="width: 100%">
-  <div class="grid-fluid">
-    <div class="grid">
-      <h3>资源</h3>
-      <ul>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://angular.cn/"
-            title="Angular官网"
-            >Angular</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://docs.mongodb.com/"
-            title="数据库MongoDB"
-            >MongoDB</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://ant.design/"
-            title="UI设计模式"
-            >Ant Design</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://ng.ant.design/"
-            title="Ant Design的Angular实现"
-            >NG-ZORRO</a
-          >
-        </li>
-      </ul>
-    </div>
-    <div class="grid">
-      <h3>帮助</h3>
-      <ul>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://github.com/kisslove/web-monitoring"
-            title="源码仓库"
-            >GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="/assets/images/weixin-gongzhonghao.jpg"
-            title="关注公众号"
-            >公众号</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="/assets/images/weixin.png"
-            title="微信"
-            >支持作者</a
-          >
-        </li>
-        <li>
-          <a title="微信/QQ:676022504">联系方式</a>
-        </li>
-      </ul>
-    </div>
-    <div class="grid">
-      <h3>友链(联系作者)</h3>
-      <ul>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=9xbvcsop"
-            >阿里云优惠购</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="http://coolwow.msedt.com/"
-            title="一款帮你选择贷款方式的多功能利息计算工具"
-            >酷娃利息对比计算工具</a
-          >
-        </li>
-        <li>
-          <a
-            appMonitorABlank
-            target="_blank"
-            href="https://github.com/kisslove/ip2region"
-            title="一款开源将IP转换成位置的工具，对外提供接口"
-            >IP转换工具</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
+
   <div
     style="color: gray; text-align: center; background: #001529; padding: 24px"
   >
@@ -426,13 +219,13 @@
       [nzXs]="24"
       style="text-align: right; width: 90%"
     >
-      <span>没有账户?</span
+      <!-- <span>没有账户?</span
       ><span
         appMonitorABlank
         (click)="isVisible_login = false; isVisible_register = true"
         style="margin-left: 24px; text-decoration: underline; cursor: pointer"
         >{{ isAdmin ? "创建新用户" : "马上注册" }}
-      </span>
+      </span> -->
     </nz-form-control>
   </nz-form-item>
 </nz-modal>

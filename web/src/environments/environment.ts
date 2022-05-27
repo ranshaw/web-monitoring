@@ -5,10 +5,10 @@
 
 export const environment = {
   production: false,
-  // apiUrl: "http://localhost:9000/",
-  // uploadDataUrl: "http://localhost:9000/Up",
-  // jsHackUrl: "https://hubing.online/bundle.js",
-  apiUrl:'https://api.suchabang.com/',
-  uploadDataUrl:'https://api.suchabang.com/Up',
-  jsHackUrl:'https://api.suchabang.com/bundle.js'
+  apiUrl: "http://localhost:9000/",
+  uploadDataUrl: "http://localhost:9000/Up",
+  jsHackUrl: "https://hubing.online/bundle.js",
+  // apiUrl:'https://api.suchabang.com/',
+  // uploadDataUrl:'https://api.suchabang.com/Up',
+  // jsHackUrl:'https://api.suchabang.com/bundle.js'
 };

@@ -184,11 +184,11 @@ export class HomepageComponent implements OnInit {
   }
 
   login() {
-    let pwd = this.encrypt(this.model.password);
+    // let pwd = this.encrypt(this.model.password);
     this.http
       .post("User/login", {
         email: this.model.email,
-        password: pwd,
+        password: this.model.password,
       })
       .subscribe((r: any) => {
         if (r.IsSuccess) {
