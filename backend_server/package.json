@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "supervisor ./bin/init",
-        "start": "pm2 start bin/init.js --name web-monitoring/backend_server",
+        "start": "pm2 start bin/init.js --name web-monitoring",
         "stop": "pm2 stop web-monitoring/backend_server",
         "restart": "npm run stop && npm run start"
     },
