@@ -14,9 +14,10 @@ exports.createAdmin = async (email) => {
   var ObjectId = mongoose.Types.ObjectId;
   var id1 = new ObjectId(util.adminUserId);
   let token = util.encrypt(id1 + "@" + new Date());
+
   var temp = new UserModel({
     email: email,
-    password:`9f2c1604c8ceec9943fd69f96220a8d1`,
+    password: `xiao1234`,
     id: id1,
     token: token,
   });
@@ -84,6 +85,7 @@ exports.login = async (req, res, next) => {
   let r = await UserModel.find({
     email: body.email,
   });
+
   if (r && r.length == 0) {
     res.json(
       util.resJson({

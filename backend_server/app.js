@@ -17,7 +17,7 @@ var fs = require("fs");
 
 // 判断是否是docker部署方式
 var isDocker = process.env.name === "web-monitoring/backend_server_docker";
-console.log(process.env.name,"process.env.name");
+console.log(process.env.name, "process.env.name");
 mongoose
   .connect(
     `mongodb://${
@@ -33,7 +33,7 @@ mongoose
   )
   .then(() => {
     //默认系统管理员
-    userInfo.createAdmin("sa@admins.com");
+    userInfo.createAdmin("work@tangyunxiao.com");
   });
 
 //开启任务
@@ -72,7 +72,7 @@ app.all("*", function (req, res, next) {
   /*让options请求快速返回*/ else next();
 });
 
-app.use("/", indexRouter);
+app.use("/", express.static("../web/dist"));
 app.use("/Monitor/", util.resolveToken, monitorRouter);
 app.use("/Up", upDataRouter);
 app.use("/User", userRouter);
